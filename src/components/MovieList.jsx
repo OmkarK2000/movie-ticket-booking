@@ -12,13 +12,13 @@ const MovieList = ({ movieList }) => {
     <Container className="d-flex flex-wrap justify-content-evenly ">
       {
         movieList.map(movie => (
-          <Card key={movie.score} style={{ width: '18rem' }} className="mt-4">
-            {console.log(movie)}
+          <Card key={movie.show.id} style={{ width: '18rem' }} className="mt-4">
+            {console.log(movie.show)}
             <Card.Img variant="top" src={movie.show.image.medium} alt="imag" />
             <Card.Body>
               <Card.Title>{movie.show.name}</Card.Title>
               <Card.Text>
-                <p className="grid gap-2"> {movie.show.genres}</p>
+                {/* <p className="grid gap-2"> {movie.show.genres}</p> */}
               </Card.Text>
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>
